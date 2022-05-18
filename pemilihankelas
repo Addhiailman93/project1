@@ -1,0 +1,38 @@
+#Program untuk menentukan kelas pada siswa baru di SMA Taruna Praja
+#Kelas terdiri dari Kelas Akselerasi, Kelas Unggulan, Kelas Reguler
+
+#Langkah 1. Membuat inputan data informasi siswa
+print('===================================================================')
+print('SELAMAT DATANG DI WEBSITE PENERIMAAN SISWA TARUNA PRAJA BANJARMASIN')
+print('===================================================================')
+input_nama = input ('Masukkan Nama Lengkap Anda: ')
+input_mtk = input ('Nilai Matematika: ')
+input_indo = input ('Nilai Bahasa Indonesia: ')
+input_inggris = input('Nilai Bahasa Inggris: ')
+input_ipa = input ('Nilai IPA: ')
+
+#Langkah 2. Ubah variable nilai mtk-ipa menjadi int lalu simpan menjadi count
+count_mtk = int(input_mtk)
+count_indo = int(input_indo)
+count_inggris = int(input_inggris)
+count_ipa = int(input_ipa)
+
+# Langkah 3. Berikan hasil nilai akhir dengan cara menghitung rata-rata nilai dari mtk-ipa
+nilai_akhir = (count_mtk + count_indo + count_inggris + count_ipa) / 4
+
+#langkah 4. Cetak semua review Data siswa Mulai dari Nama sampe Nilai Akhir
+print('=========================================================')
+print(' HASIL AKHIR SELEKSI KELAS SMA TARUNA PRAJA BANJARMASIN  ')
+print('=========================================================')
+print('Nama Lengkap: ' + input_nama)
+print('Nilai Akhir: ' + str(nilai_akhir))
+
+#Langkah 5. Membuat Kondisi Nilai Akhir dan Keputusan
+if nilai_akhir >= 90:
+    print('Selamat Anda Diterima di Kelas Akselerasi')
+elif nilai_akhir == 85:
+    print('Selamat Anda Diterima di Kelas Unggulan')
+else:
+    print('Selamat Anda Diterima di Kelas Reguler')
+print('=========================================================')
+print('Created by Addhia Ilman')
